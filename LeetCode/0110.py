@@ -23,16 +23,17 @@ class Solution:
         
         return dfs(root) != -1
 
-# # O(n) O(n)
+# # O(n log n) O(n)
 # class Solution:
 #     def isBalanced(self, root: Optional[TreeNode]) -> bool:
+#         if not root:
+#             return True
+
 #         def height(node):
 #             if not node:
 #                 return 0
 #             return 1 + max(height(node.left), height(node.right))
         
-#         if not root:
-#             return True
 #         if abs(height(root.left) - height(root.right)) > 1:
 #             return False
 #         return self.isBalanced(root.left) and self.isBalanced(root.right)
